@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    // Incorrect use of innerHTML, leading to unexpected behavior
+    document.getElementById("myDiv").innerHTML = 100 + 50; // This will add 150 as a string, not perform mathematical operation
+    document.getElementById("myDiv").innerHTML += 100;  // This will add "100" to the string "150", resulting in "150100"
+
+    //Correct way
+    let num = 100 + 50;
+    document.getElementById("myDiv").innerHTML = num + 100; 
+    
+  </script>
+</body>
+</html>
