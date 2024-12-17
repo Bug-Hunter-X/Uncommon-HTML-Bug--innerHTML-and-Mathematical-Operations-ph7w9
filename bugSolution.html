@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    let num = 100 + 50;
+    document.getElementById("myDiv").innerHTML = num + 100; 
+  </script>
+</body>
+</html>
